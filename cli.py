@@ -136,7 +136,7 @@ if yesno == "N":
   os.system("clear")
   exit()
 
-print(Fore.LIGHTYELLOW_EX+"Hitting "+ip+"with "+int(threadcount)*int(count)+"threads using "+hitmethod)
+print(Fore.LIGHTYELLOW_EX+"Hitting "+ip+"with "+threadcount*count+"threads using "+hitmethod)
 
 if hitmethod == "HTTP":
   t1 = threading.Thread(target=http)
