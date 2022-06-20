@@ -87,15 +87,18 @@ print(Fore.MAGENTA+helpmenu+Fore.WHITE)
 
 ip = input(Fore.CYAN+"  URL/IP: "+Fore.WHITE)
 
-threadcount = input(int(Fore.CYAN+"  How many threads (1-300): "+Fore.WHITE))
+threadcount = input(Fore.CYAN+"  How many threads (1-300): "+Fore.WHITE)
 
-count = input(int(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE))
+count = input(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE)
 
 length = input(Fore.CYAN+"  How long to hit (Seconds): "+Fore.WHITE)
 
 port = input(Fore.CYAN+"  Port (Recommended port 80 or 443): ")
 
 hitmethod = input(Fore.CYAN+"  Method (HTTP, ICMP, SLOWLORIS, MEMCACHED, SYN, UDP): "+Fore.WHITE)
+
+m1 = int(threadcount)
+m2 = int(count)
 
 def http():
   print(Fore.GREEN+"  Started Thread!")
@@ -136,7 +139,7 @@ if yesno == "N":
   os.system("clear")
   exit()
 
-print(Fore.LIGHTYELLOW_EX+"Hitting "+ip+"with "+threadcount*count+"threads using "+hitmethod)
+print(Fore.LIGHTYELLOW_EX+"Hitting "+ip+"with "+m1*m2+"threads using "+hitmethod)
 
 if hitmethod == "HTTP":
   t1 = threading.Thread(target=http)
