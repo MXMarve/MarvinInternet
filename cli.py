@@ -21,15 +21,41 @@ except:
   os.system("pip3.9 install signal 1>/dev/null")
 
 try:
-  import time
+  import requests
 except:
-  print("Installing Dependency: Readchar")
-  os.system("pip3.9 install readchar 1>/dev/null")
+  print("Installing Dependency: Requests")
+  os.system("pip3.9 install requests 1>/dev/null")
+try:
+  import scapy
+except:
+  print("Installing Dependency: Scapy")
+  os.system("pip3.9 install scapy 1>/dev/null")
+try:
+  import wget
+except:
+  print("Installing Dependency: Wget")
+  os.system("pip3.9 install wget 1>/dev/null")
+try:
+  import argparse
+except:
+  print("Installing Dependency: Argparse")
+  os.system("pip3.9 install argparse 1>/dev/null")
+try:
+  import humanfriendly
+except:
+  print("Installing Dependency: HumanFriendly")
+  os.system("pip3.9 install humanfriendly 1>/dev/null")
 
 # --------------------------------------------
 import threading
 import time
 import colorama
+import requests
+import scapy
+import wget
+import argparse
+import colorama
+import humanfriendly
 from colorama import Fore
 from signal import signal, SIGINT
 from sys import exit
