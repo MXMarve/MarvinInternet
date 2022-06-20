@@ -86,7 +86,7 @@ class AttackMethod:
             self.threads.append(thread)
         # Start flood threads
         with Spinner(
-            label=f"{Fore.YELLOW}Starting {self.threads_count} threads{Fore.RESET}",
+            label=f"{Fore.YELLOW}Starting...{Fore.RESET}",
             total=100,
         ) as spinner:
             for index, thread in enumerate(self.threads):
@@ -96,7 +96,7 @@ class AttackMethod:
         for index, thread in enumerate(self.threads):
             thread.join()
             print(
-                f"{Fore.GREEN}[+] {Fore.YELLOW}Stopped thread {index + 1}.{Fore.RESET}"
+                f"{Fore.GREEN}[+] {Fore.YELLOW}Stopped... {index + 1}.{Fore.RESET}"
             )
 
     # Start ddos attack
