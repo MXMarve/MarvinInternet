@@ -106,10 +106,6 @@ class AttackMethod:
         else:
             target = str(self.target).strip("()").replace(", ", ":").replace("'", "")
         duration = format_timespan(self.duration)
-        print(
-            f"{Fore.MAGENTA}[?] {Fore.BLUE}Starting attack to {target} using method {self.name}.{Fore.RESET}\n"
-            f"{Fore.MAGENTA}[?] {Fore.BLUE}Attack will be stopped after {Fore.MAGENTA}{duration}{Fore.BLUE}.{Fore.RESET}"
-        )
         self.is_running = True
         try:
             self.__RunThreads()
