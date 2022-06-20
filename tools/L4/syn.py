@@ -24,7 +24,3 @@ def flood(target):
             print(
                 f"{Fore.MAGENTA}Error while sending SYN packet\n{Fore.MAGENTA}{e}{Fore.RESET}"
             )
-        else:
-            print(
-                f"{Fore.GREEN}[+] {Fore.YELLOW}SYN packet sent to {'{}:{}'.format(*target)}.{Fore.RESET}"
-            )

@@ -16,7 +16,3 @@ def flood(target):
             print(
                 f"{Fore.MAGENTA}Error while sending UDP packet\n{Fore.MAGENTA}{e}{Fore.RESET}"
             )
-        else:
-            print(
-                f"{Fore.GREEN}[+] {Fore.YELLOW}UDP random packet sent! Payload size: {len(payload)}. {Fore.RESET}"
-            )

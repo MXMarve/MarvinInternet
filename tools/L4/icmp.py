@@ -15,7 +15,3 @@ def flood(target):
             print(
                 f"{Fore.RED}[!] {Fore.MAGENTA}Error while sending 'ICMP'\n{Fore.MAGENTA}{e}{Fore.RESET}"
             )
-        else:
-            print(
-                f"{Fore.GREEN}[+] {Fore.YELLOW}ICMP packet send to {target[0]} {Fore.RESET}"
-            )
