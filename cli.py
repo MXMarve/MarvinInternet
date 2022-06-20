@@ -135,7 +135,9 @@ if yesno == "N":
   time.sleep(2)
   os.system("clear")
   exit()
-counted = count * threadcount
+
+counted = str(count) * str(threadcount)
+
 print(Fore.LIGHTYELLOW_EX+"Hitting "+ip+"with "+counted+"threads using "+hitmethod)
 
 if hitmethod == "HTTP":
