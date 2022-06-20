@@ -87,9 +87,9 @@ print(Fore.MAGENTA+helpmenu+Fore.WHITE)
 
 ip = input(Fore.CYAN+"  URL/IP: "+Fore.WHITE)
 
-threadcount = input(Fore.CYAN+"  How many threads (1-300): "+Fore.WHITE)
+threadcount = input(int(Fore.CYAN+"  How many threads (1-300): "+Fore.WHITE))
 
-count = input(Fore.CYAN+"  Multiplier(1x-50x): "+Fore.WHITE)
+count = input(int(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE))
 
 length = input(Fore.CYAN+"  How long to hit (Seconds): "+Fore.WHITE)
 
