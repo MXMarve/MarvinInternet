@@ -20,7 +20,7 @@ def GetMethodByName(method):
         dir = f"tools.L7.{method.lower()}"
     else:
         raise SystemExit(
-            f"{Fore.RED}[!] {Fore.MAGENTA}Unknown ddos method {repr(method)} selected..{Fore.RESET}"
+            f"{Fore.RED}[!] {Fore.MAGENTA}Unknown Method {repr(method)} Selected..{Fore.RESET}"
         )
     module = __import__(dir, fromlist=["object"])
     if hasattr(module, "flood"):
