@@ -33,20 +33,10 @@ except:
   os.system("pip3.9 install humanfriendly 1>/dev/null")
 
 # --------------------------------------------
+
 import time
-import requests
-import scapy
-import wget
-import argparse
-import colorama
-import humanfriendly
 from colorama import Fore
-from signal import signal, SIGINT
-from sys import exit
-
 os.system("clear")
-time.sleep(1)
-
 logo = """
   ███╗   ███╗ █████╗ ██████╗ ██╗   ██╗██╗███╗   ██╗
   ████╗ ████║██╔══██╗██╔══██╗██║   ██║██║████╗  ██║
@@ -56,7 +46,6 @@ logo = """
   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝
   DDoS v2                                               
 """
-
 helpmenu = """
   HTTP URL
   ICMP IPV4
@@ -69,10 +58,8 @@ helpmenu = """
 
 """
 print(Fore.RED + logo + Fore.BLUE)
-print(Fore.MAGENTA + helpmenu + Fore.WHITE)
-
+print(Fore.LIGHTYELLOW_EX + helpmenu + Fore.BLUE)
 method1 = input("Method (CAPS MATTER): ")
-
 if method1 == "ICMP":
     os.system("clear")
     os.system("python3.9 icmp.py")
