@@ -10,10 +10,14 @@ logo = """
   ██║╚██╔╝██║██╔══██║██╔══██╗╚██╗ ██╔╝██║██║╚██╗██║
   ██║ ╚═╝ ██║██║  ██║██║  ██║ ╚████╔╝ ██║██║ ╚████║
   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝
-  DDoS v2                                               
+  UDP v2
+
+
+
+  URL MUST BE IPV4                                               
 """
 print(Fore.RED+logo+Fore.WHITE)
-ip = input(Fore.CYAN+"  IP/URL: "+Fore.WHITE)
+ip = input(Fore.CYAN+"  IPV4: "+Fore.WHITE)
 threadcount = input(Fore.CYAN+"  Threads (1-300): "+Fore.WHITE)
 count = input(Fore.CYAN+"  Multiplier: "+Fore.WHITE)
 attacktime = input(Fore.CYAN+"  Time (Seconds): "+Fore.WHITE)
