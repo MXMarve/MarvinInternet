@@ -67,20 +67,20 @@ print(Fore.RED + logo + Fore.BLUE)
 print(Fore.LIGHTYELLOW_EX + helpmenu + Fore.BLUE)
 method1 = input("Method (CAPS MATTER): ")
 if method1 == "ICMP":
-    os.system("clear")
-    os.system("python3.9 icmp.py")
+  os.system("clear")
+  os.system("python3.9 icmp.py")
 if method1 == "HTTP":
-    os.system("clear")
-    os.system("python3.9 http.py")
+  os.system("clear")
+  os.system("python3.9 http.py")
 if method1 == "MEMCACHED":
-    os.system("clear")
-    os.system("python3.9 memcached.py")
+  os.system("clear")
+  os.system("python3.9 memcached.py")
 if method1 == "SLOWLORIS":
-    os.system("clear")
-    os.system("python3.9 slowloris.py")
+  os.system("clear")
+  os.system("python3.9 slowloris.py")
 if method1 == "SYN":
-    os.system("clear")
-    os.system("python3.9 syn.py")
+  os.system("clear")
+  os.system("python3.9 syn.py")
 if method1 == "UDP":
-    os.system("clear")
-    os.system("python3.9 udp.py")
+  os.system("clear")
+  os.system("python3.9 udp.py")
