@@ -1,45 +1,5 @@
 import os
 os.system("clear")
-# -------------------------------------------- 
-try:
-  import time
-except:
-  print("Installing Dependency: Time")
-  os.system("pip3.9 install time 1>/dev/null")
-try:
-  import requests
-except:
-  print("Installing Dependency: Requests")
-  os.system("pip3.9 install requests 1>/dev/null")
-try:
-  import scapy
-except:
-  print("Installing Dependency: Scapy")
-  os.system("pip3.9 install scapy 1>/dev/null")
-try:
-  import wget
-except:
-  print("Installing Dependency: Wget")
-  os.system("pip3.9 install wget 1>/dev/null")
-try:
-  import argparse
-except:
-  print("Installing Dependency: Argparse")
-  os.system("pip3.9 install argparse 1>/dev/null")
-try:
-  import humanfriendly
-except:
-  print("Installing Dependency: HumanFriendly")
-  os.system("pip3.9 install humanfriendly 1>/dev/null")
-try:
-  import colorama
-except:
-  print("Installing Dependency: Colorama")
-  os.system("pip3.9 install colorama 1>/dev/null")
-
-
-# --------------------------------------------
-
 import time
 from colorama import Fore
 os.system("clear")
