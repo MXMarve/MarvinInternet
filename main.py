@@ -31,6 +31,12 @@ try:
 except:
   print("Installing Dependency: HumanFriendly")
   os.system("pip3.9 install humanfriendly 1>/dev/null")
+try:
+  import colorama
+except:
+  print("Installing Dependency: Colorama")
+  os.system("pip3.9 install colorama 1>/dev/null")
+
 
 # --------------------------------------------
 
