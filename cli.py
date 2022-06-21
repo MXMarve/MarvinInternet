@@ -74,11 +74,14 @@ logo = """
 
 helpmenu = """
   HTTP: URL/IPV4, PORT 80
-  ICMP: IPV4 Address, if you need the address, use nslookup.io.
+  ICMP: IPV4 Address, PORT 53/80 (Recommend 53) If you need the address, use nslookup.io.
   SLOWLORIS: URL/IPV4, PORT 80/443/53 (Recommend 80)
   MEMCACHED: URL/IPV4, PORT 80/443/53 (Recommend 80)
-  SYN: URL/IPV4, PORT 80/443/53 (Recommend 53)
+  SYN: IPV4, PORT 80/443/53 (Recommend 53)
   UDP: URL/IPV4, PORT 80/443/53 (Recommend 53)
+
+  If any methods give a shit ton of errors, and it says Name or service not known,
+  try IPv4, if that didn't work, the ip doesn't work.
 """
 print(Fore.RED + logo + Fore.BLUE)
 print(Fore.MAGENTA+helpmenu+Fore.WHITE)
