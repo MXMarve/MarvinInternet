@@ -13,11 +13,12 @@ logo = """
   DDoS v2                                               
 """
 helpmenu = """
-  HTTP URL
-  ICMP IPV4
-  SLOWLORIS IPV4/URL
-  MEMCACHED IPV4/URL
-  UDP IPV4
+  METHOD   |   ADDRESS TYPE
+  HTTP         URL
+  ICMP         IPV4
+  SLOWLORIS    IPV4/URL
+  MEMCACHED    IPV4/URL
+  UDP          IPV4
 
   If any methods give a shit ton of errors, and it says Name or service not known,
   try IPv4, if that didn't work, the ip doesn't work.
@@ -42,23 +43,5 @@ if method1 == "SYN":
   os.system("clear")
   os.system("python3 syn.py")
 if method1 == "UDP":
-  os.system("clear")
-  os.system("python3 udp.py")
-if method1 == "icmp":
-  os.system("clear")
-  os.system("python3 icmp.py")
-if method1 == "http":
-  os.system("clear")
-  os.system("python3 http.py")
-if method1 == "memcached":
-  os.system("clear")
-  os.system("python3 memcached.py")
-if method1 == "slowloris":
-  os.system("clear")
-  os.system("python3 slowloris.py")
-if method1 == "syn":
-  os.system("clear")
-  os.system("python3 syn.py")
-if method1 == "udp":
   os.system("clear")
   os.system("python3 udp.py")
