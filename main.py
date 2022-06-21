@@ -25,7 +25,7 @@ helpmenu = """
 """
 print(Fore.RED + logo + Fore.BLUE)
 print(Fore.LIGHTYELLOW_EX + helpmenu + Fore.BLUE)
-method1 = input("Method (CAPS MATTER): ")
+method1 = input("Method: "+Fore.WHITE)
 if method1 == "ICMP":
   os.system("clear")
   os.system("python3 icmp.py")
@@ -42,5 +42,23 @@ if method1 == "SYN":
   os.system("clear")
   os.system("python3 syn.py")
 if method1 == "UDP":
+  os.system("clear")
+  os.system("python3 udp.py")
+if method1 == "icmp":
+  os.system("clear")
+  os.system("python3 icmp.py")
+if method1 == "http":
+  os.system("clear")
+  os.system("python3 http.py")
+if method1 == "memcached":
+  os.system("clear")
+  os.system("python3 memcached.py")
+if method1 == "slowloris":
+  os.system("clear")
+  os.system("python3 slowloris.py")
+if method1 == "syn":
+  os.system("clear")
+  os.system("python3 syn.py")
+if method1 == "udp":
   os.system("clear")
   os.system("python3 udp.py")
