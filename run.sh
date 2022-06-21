@@ -1,3 +1,4 @@
 #!/bin/sh
-pip3 install -r requirements.txt
+sudo apt install python3-wget python3-humanfriendly 1>/dev/null
+pip3 install -r requirements.txt 1>/dev/null
 python3 main.py
