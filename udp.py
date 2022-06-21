@@ -4,6 +4,16 @@ import threading
 import time
 from colorama import Fore
 from sys import exit
+logo = """
+  ███╗   ███╗ █████╗ ██████╗ ██╗   ██╗██╗███╗   ██╗
+  ████╗ ████║██╔══██╗██╔══██╗██║   ██║██║████╗  ██║
+  ██╔████╔██║███████║██████╔╝██║   ██║██║██╔██╗ ██║
+  ██║╚██╔╝██║██╔══██║██╔══██╗╚██╗ ██╔╝██║██║╚██╗██║
+  ██║ ╚═╝ ██║██║  ██║██║  ██║ ╚████╔╝ ██║██║ ╚████║
+  ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝
+  DDoS v2                                               
+"""
+print(Fore.RED+logo+Fore.WHITE)
 ip = input(Fore.LIGHTWHITE_EX+"  IP/URL: "+Fore.WHITE)
 threadcount = input(Fore.LIGHTWHITE_EX+"  Threads (1-300): "+Fore.WHITE)
 count = input(Fore.LIGHTWHITE_EX+"  Multiplier: "+Fore.WHITE)

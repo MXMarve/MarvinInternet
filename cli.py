@@ -82,14 +82,20 @@ print(Fore.MAGENTA+helpmenu+Fore.WHITE)
 targetmethod = input("Method (CAPS MATTER): ")
 
 if targetmethod == "ICMP":
+    os.system("clear")
     exec(open("icmp.py"()))
 if targetmethod == "HTTP":
+    os.system("clear")
     exec(open("http.py"()))
 if targetmethod == "MEMCACHED":
+    os.system("clear")
     exec(open("memcached.py"()))
 if targetmethod == "SLOWLORIS":
     exec(open("slowloris.py"()))
+    os.system("clear")
 if targetmethod == "SYN":
     exec(open("syn.py"()))
+    os.system("clear")
 if targetmethod == "UDP":
+    os.system("clear")
     exec(open("udp.py"()))
