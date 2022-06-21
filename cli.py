@@ -40,9 +40,7 @@ except:
   os.system("pip3.9 install humanfriendly 1>/dev/null")
 
 # --------------------------------------------
-import threading
 import time
-import colorama
 import requests
 import scapy
 import wget
@@ -55,6 +53,7 @@ from sys import exit
 
 os.system("clear")
 time.sleep(1)
+
 logo = """
   ███╗   ███╗ █████╗ ██████╗ ██╗   ██╗██╗███╗   ██╗
   ████╗ ████║██╔══██╗██╔══██╗██║   ██║██║████╗  ██║
@@ -77,25 +76,25 @@ helpmenu = """
 
 """
 print(Fore.RED + logo + Fore.BLUE)
-print(Fore.MAGENTA+helpmenu+Fore.WHITE)
+print(Fore.MAGENTA + helpmenu + Fore.WHITE)
 
 targetmethod = input("Method (CAPS MATTER): ")
 
 if targetmethod == "ICMP":
+    exec(open("icmp.py").read())
     os.system("clear")
-    exec(open("icmp.py"()))
 if targetmethod == "HTTP":
+    exec(open("http.py").read())
     os.system("clear")
-    exec(open("http.py"()))
 if targetmethod == "MEMCACHED":
+    exec(open("memcached.py").read())
     os.system("clear")
-    exec(open("memcached.py"()))
 if targetmethod == "SLOWLORIS":
-    exec(open("slowloris.py"()))
+    exec(open("slowloris.py").read())
     os.system("clear")
 if targetmethod == "SYN":
-    exec(open("syn.py"()))
+    exec(open("syn.py").read())
     os.system("clear")
 if targetmethod == "UDP":
+    exec(open("udp.py").read())
     os.system("clear")
-    exec(open("udp.py"()))
