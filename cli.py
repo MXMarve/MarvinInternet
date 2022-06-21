@@ -1,13 +1,6 @@
 import os
-
+os.system("clear")
 # -------------------------------------------- 
-
-try:
-  import Colorama
-except:
-  print("Installing Dependency: Colorama")
-  os.system("pip3.9 install colorama 1>/dev/null")
-
 try:
   import time
 except:
@@ -81,20 +74,20 @@ print(Fore.MAGENTA + helpmenu + Fore.WHITE)
 method1 = input("Method (CAPS MATTER): ")
 
 if method1 == "ICMP":
-    exec(open("icmp.py").read())
     os.system("clear")
+    os.system("python3.9 icmp.py")
 if method1 == "HTTP":
-    exec(open("http.py").read())
     os.system("clear")
+    os.system("python3.9 http.py")
 if method1 == "MEMCACHED":
-    exec(open("memcached.py").read())
     os.system("clear")
+    os.system("python3.9 memcached.py")
 if method1 == "SLOWLORIS":
-    exec(open("slowloris.py").read())
     os.system("clear")
+    os.system("python3.9 slowloris.py")
 if method1 == "SYN":
-    exec(open("syn.py").read())
     os.system("clear")
+    os.system("python3.9 syn.py")
 if method1 == "UDP":
-    exec(open("udp.py").read())
     os.system("clear")
+    os.system("python3.9 udp.py")
