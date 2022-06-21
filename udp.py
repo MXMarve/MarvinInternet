@@ -16,7 +16,7 @@ print(Fore.RED+logo+Fore.WHITE)
 ip = input(Fore.CYAN+"  IP/URL: "+Fore.WHITE)
 threadcount = input(Fore.CYAN+"  Threads (1-300): "+Fore.WHITE)
 count = input(Fore.CYAN+"  Multiplier: "+Fore.WHITE)
-attacktime = input(Fore.LIGHTYELLOW_EX+"  Time (Seconds): "+Fore.WHITE)
+attacktime = input(Fore.CYAN+"  Time (Seconds): "+Fore.WHITE)
 cont = input(Fore.LIGHTYELLOW_EX+"  Continue? Y/N: ")
 if cont == 'n':
     os.system("clear")
